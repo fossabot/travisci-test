@@ -16,7 +16,7 @@ before_script:
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
   - php artisan key:generate
-  - mysql -e 'create database testing;
+  - mysql -e 'create database testing;'
 
 script:
   - vendor/bin/phpunit --coverage-text
