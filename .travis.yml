@@ -16,6 +16,8 @@ before_script:
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
   - php artisan key:generate
+
+before_install:
   - mysql -e 'create database testing;'
 
 script:
