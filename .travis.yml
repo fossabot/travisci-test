@@ -18,9 +18,6 @@ before_script:
   - phpenv rehash
   - php artisan key:generate
 
-before_install:
-  - mysql -e 'create database testing;'
-
 script:
   - vendor/bin/phpunit --coverage-text
   - phpcs --ignore=app/Http/Controllers/Auth,app/Http/Controllers/Controller.php app/Http/Controllers
