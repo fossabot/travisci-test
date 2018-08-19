@@ -6,6 +6,9 @@ language: php
 php:
   - '7.1'
   
+addons:
+  mariadb: '10.1'
+  
 before_script:
   - composer self-update
   - composer install --no-interaction
@@ -17,4 +20,4 @@ before_script:
 script:
   - vendor/bin/phpunit --coverage-text
   - phpcs --ignore=app/Http/Controllers/Auth,app/Http/Controllers/Controller.php app/Http/Controllers
-
+  - php artisan migrate --step
