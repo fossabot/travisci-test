@@ -12,6 +12,7 @@ before_script:
   - cp .env.travis .env
   - pear install pear/PHP_CodeSniffer
   - phpenv rehash
+  - php artisan key:generate
 
 script:
   - vendor/bin/phpunit --coverage-text
